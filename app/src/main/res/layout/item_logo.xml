@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="com.example.cardemo.bean.Result"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itlogo_iv"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:itemImage="@{item.brand_logo}"
+            app:srcCompat="@mipmap/cb"/>
+
+        <TextView
+            android:id="@+id/itlogotv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@{item.brand_name}"
+            tools:text="奥迪"/>
+
+    </LinearLayout>
+
+
+</layout>
